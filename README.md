@@ -15,5 +15,5 @@ Before you begin, ensure you have met the following requirements:
 ### Run Locally
 To run in the locally, run this command on your git bash:
 ```bash
-git clone https://github.com/ahmadammarm/lets-coffee-landing-page.git
+git clone https://github.com/ahmadammarm/lets-coffee.git
 ```

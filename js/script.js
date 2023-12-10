@@ -46,7 +46,7 @@ document.getElementById('myForm').addEventListener('submit', function (e) {
   const phoneNumber = '6281217952403'; // Ganti dengan nomor WhatsApp Anda
 
   // Pesan yang akan dikirimkan
-  const message = encodeURIComponent(`Halo, nama saya ${nama}. Email saya: ${email}. Nomor Handphone saya: ${alamat}`);
+  const message = encodeURIComponent(`Halo, nama saya ${nama}. Email saya ${email}. Alamat saya di ${alamat}`);
 
   // Membuat tautan WhatsApp dengan nomor dan pesan yang sudah ditentukan
   const whatsappUrl = `${baseUrl}${phoneNumber}&text=${message}`;

@@ -35,23 +35,22 @@ document.addEventListener("click", function (e) {
   }
 })
 
+
+// Menggunakan format terhubung dengan WhatsApp
 document.getElementById('myForm').addEventListener('submit', function (e) {
   e.preventDefault();
   const nama = document.getElementById('nama').value;
   const email = document.getElementById('email').value;
   const alamat = document.getElementById('alamat').value;
 
-  // Menggunakan format tautan WhatsApp
   const baseUrl = 'https://api.whatsapp.com/send?phone=';
-  const phoneNumber = '6281217952403'; // Ganti dengan nomor WhatsApp Anda
+  const phoneNumber = '6281217952403';
 
-  // Pesan yang akan dikirimkan
+  
   const message = encodeURIComponent(`Halo, nama saya ${nama}. Email saya ${email}. Alamat saya di ${alamat}`);
 
-  // Membuat tautan WhatsApp dengan nomor dan pesan yang sudah ditentukan
   const whatsappUrl = `${baseUrl}${phoneNumber}&text=${message}`;
 
-  // Membuka tautan WhatsApp pada tab atau jendela baru
   window.open(whatsappUrl, '_blank');
 });
 

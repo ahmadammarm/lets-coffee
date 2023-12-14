@@ -35,15 +35,21 @@ document.addEventListener("click", function (e) {
   }
 })
 
-// Logika untuk ketika star diklik
-const stars = document.querySelectorAll('.product-stars .star');
+// Logika untuk ketika tombol add to cart diklik
+const shoppingCart = document.querySelector(".shopping-cart");
 
-stars.forEach(star => {
-  star.addEventListener('click', function() {
-    this.classList.toggle('active');
-  });
+document.querySelector("#shopping-cart-btn").onclick = (e) => {
+  shoppingCart.classList.toggle("active");
+  e.preventDefault();
+};
+
+const cartBtn = document.querySelector("#shopping-cart-btn");
+
+document.addEventListener("click", function (e) {
+  if (!cartBtn.contains(e.target) && !shoppingCart.contains(e.target)) {
+    shoppingCart.classList.remove("active");
+  }
 });
-
 
 
 // Menggunakan format terhubung dengan WhatsApp

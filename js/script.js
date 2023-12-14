@@ -35,6 +35,16 @@ document.addEventListener("click", function (e) {
   }
 })
 
+// Logika untuk ketika star diklik
+const stars = document.querySelectorAll('.product-stars .star');
+
+stars.forEach(star => {
+  star.addEventListener('click', function() {
+    this.classList.toggle('active');
+  });
+});
+
+
 
 // Menggunakan format terhubung dengan WhatsApp
 document.getElementById('myForm').addEventListener('submit', function (e) {

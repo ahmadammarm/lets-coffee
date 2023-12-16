@@ -428,6 +428,7 @@ body {
   font-size: 1.3rem;
   margin-top: 1rem;
   font-weight: 100;
+  color: var(--primary);
 }
 
 /* Contact Section */
@@ -536,6 +537,75 @@ footer .credit a {
 footer .credit a:hover {
   color: blue;
 }
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-container {
+  position: relative;
+  margin: auto;
+  padding: 1rem;
+  width: 80%;
+  max-width: 80rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: auto;
+}
+
+.modal-container .close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 2rem;
+  color: var(--bg);
+  cursor: pointer;
+}
+
+.modal-content {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.modal-content img {
+  height: 20rem;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+
+.modal-content h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.modal-content p {
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+  margin-top: 1rem;
+  color: #000;
+}
+
+.modal-content a {
+  display: flex;
+  gap: 1rem;
+  width: 13rem;
+  background-color: var(--primary);
+  color: #fff;
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+}
+
+
 /* Media Queries */
 
 /* Laptop */
@@ -627,6 +697,13 @@ footer .credit a:hover {
 
   .contact .row form {
     padding-top: 0;
+  }
+
+  .modal-content {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

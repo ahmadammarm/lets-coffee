@@ -70,3 +70,23 @@ document.getElementById('myForm').addEventListener('submit', function (e) {
   window.open(whatsappUrl, '_blank');
 });
 
+
+// Item Detail Modal
+const itemModal = document.querySelector("#item-detail-modal");
+const itemModalBtn = document.querySelector(".item-modal-btn");
+
+itemModalBtn.addEventListener("click", (e) => {
+  itemModal.style.display = "flex";
+  e.preventDefault();
+});
+
+
+// Close Item Detail Modal
+const itemModalCloseBtn = document.querySelector(".close");
+
+itemModalCloseBtn.addEventListener("click", (e) => {
+  itemModal.style.display = "none";
+  e.preventDefault();
+})
+
+ 

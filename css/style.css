@@ -560,6 +560,20 @@ footer .credit a:hover {
   background-color: #fff;
   border-radius: 1rem;
   overflow: auto;
+  animation: animateModal 0.5s ease;
+}
+
+/* Modal Animation */
+@keyframes animateModal {
+  from {
+    top : -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 .modal-container .close {
@@ -585,14 +599,14 @@ footer .credit a:hover {
 .modal-content h3 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: var(--primary);
+  color: var(--bg);
 }
 
 .modal-content p {
   font-size: 1.5rem;
   line-height: 1.6rem;
   margin-top: 1rem;
-  color: #000;
+  color: var(--bg);
 }
 
 .modal-content a {

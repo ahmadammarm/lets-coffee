@@ -89,4 +89,10 @@ itemModalCloseBtn.addEventListener("click", (e) => {
   e.preventDefault();
 })
 
+// Close Item Detail Modal ketika klik di luar modal
+window.addEventListener("click", (e) => {
+  if (e.target === itemModal) {
+    itemModal.style.display = "none";
+  }
+})
  

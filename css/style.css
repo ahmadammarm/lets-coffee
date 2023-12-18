@@ -708,6 +708,10 @@ footer .credit a:hover {
     width: 90%;
   }
 
+  .hero {
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+  }
+
   .about .row {
     flex-wrap: wrap;
   }

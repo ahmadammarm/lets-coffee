@@ -51,6 +51,13 @@ document.addEventListener("click", function (e) {
   }
 });
 
+const shoppingCartBtn = document.getElementById("shopping-cart-button");
+
+shoppingCartBtn.addEventListener("click", (event) => {
+  event.preventDefault(); 
+});
+
+
 
 // Menggunakan format terhubung dengan WhatsApp
 document.getElementById('myForm').addEventListener('submit', function (e) {
@@ -73,12 +80,16 @@ document.getElementById('myForm').addEventListener('submit', function (e) {
 
 // Item Detail Modal
 const itemModal = document.querySelector("#item-detail-modal");
-const itemModalBtn = document.querySelector(".item-modal-btn");
+const itemModalBtn = document.querySelectorAll(".item-modal-btn");
 
-itemModalBtn.addEventListener("click", (e) => {
-  itemModal.style.display = "flex";
-  e.preventDefault();
-});
+itemModalBtn.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    itemModal.style.display = "flex";
+    e.preventDefault();
+  });
+  
+})
+
 
 
 // Close Item Detail Modal
@@ -95,4 +106,3 @@ window.addEventListener("click", (e) => {
     itemModal.style.display = "none";
   }
 })
- 

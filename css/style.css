@@ -101,9 +101,10 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
 }
 
-.hero::after {
+/* .hero::after {
   content: "";
   display: block;
   position: absolute;
@@ -111,11 +112,12 @@ body {
   height: 30%;
   bottom: 0;
   background: linear-gradient(0deg, rgba(1, 1, 3, 1) 8%, rgba(255, 255, 255, 0) 50%);
-}
+} */
 
 .hero .content {
   padding: 1.4rem 7%;
   max-width: 60rem;
+  position: fixed;
 }
 
 .hero .content h1 {
@@ -191,8 +193,9 @@ body {
 }
 
 .about .row .about-img img {
-  width: 100%;
-  border-radius: 1rem;
+  width: 90%;
+  border-radius: 5rem;
+  border: 3px solid var(--primary);
 }
 
 .about .row .content {
@@ -254,6 +257,22 @@ body {
 }
 
 /* Shopping Cart */
+#shopping-cart-btn {
+  position: relative;
+  cursor: pointer;
+}
+
+#shopping-cart-btn .shopping-cart-badge {
+  display: inline-block;
+  padding: 1px 5px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 0;
+  right: -10px;
+}
+
 .shopping-cart {
   position: absolute;
   top: 100%;
@@ -277,14 +296,13 @@ body {
 }
 
 .shopping-cart img {
-  height: 5rem;
+  height: 4rem;
   border-radius: 50%;
 }
 
 .shopping-cart h3 {
-  fons-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--primary);
-  padding-bottom: 0.5rem;
 }
 
 .shopping-cart .item-price {
@@ -298,8 +316,22 @@ body {
   color: var(--bg);
   transition: 0.3s;
 }
-.shopping-cart .remove-item:hover {
-  color: var(--primary);
+
+.shopping-cart .cart-item #remove-product-cart,
+.shopping-cart .cart-item #add-product-cart {
+  display: inline-block;
+  padding: 1px 5px;
+  cursor: pointer;
+  margin: 0 8px;
+  background-color: var(--primary);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.shopping-cart h4 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  text-align: center;
 }
 
 .shopping-cart.active {
@@ -373,7 +405,7 @@ body {
 
 .products .product-card {
   text-align: center;
-  border: 1px solid #eee;
+  border: 1px solid var(--primary);
   padding: 2rem;
 }
 
@@ -384,20 +416,22 @@ body {
   gap: 1rem;
 }
 
-.products .product-icons a {
+.products .product-icons button {
   width: 4rem;
   height: 4rem;
   color: #fff;
   margin: 0.5rem;
-  border: 1px solid #666;
+  border: 1px solid var(--primary);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: var(--bg);
 }
 
-.products .product-icons a:hover {
+.products .product-icons button:hover {
   background-color: var(--primary);
 }
 
@@ -699,6 +733,11 @@ footer .credit a:hover {
 
   .menu p {
     font-size: 1.3rem;
+  }
+
+  .products .products-icons svg {
+    width: 2rem;
+    height: 2rem;
   }
 
   .contact .row {

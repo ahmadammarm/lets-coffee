@@ -375,7 +375,7 @@ body {
   width: 70%;
 }
 
-.form-container button {
+.form-container .checkout-btn {
   display: block;
   margin: 1rem auto;
   padding: 0.5rem 1rem;
@@ -387,6 +387,8 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
+
+
 
 
 /* Menu Section */

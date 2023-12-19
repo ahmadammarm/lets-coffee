@@ -25,6 +25,9 @@
 
     <!-- Alpine Js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Alpine JS -->
+    <script src="js/app.js" async></script>
   </head>
 
   <body>
@@ -78,22 +81,24 @@
         <h4 x-show="!$store.cart.items.length">Keranjang Masih Kosong</h4>
         <h4 x-show="$store.cart.items.length">Total : <span x-text="formatRupiah($store.cart.total)"></span></h4>
         <div class="form-container" x-show="$store.cart.items.length">
-          <form action="" id="checkout">
+          <form action="" id="checkoutForm">
+            <input type="hidden" name="items" x-model="JSON.stringify($store.cart.items)">
+            <input type="hidden" name="total" x-model="$store.cart.total">
             <h5>Customer Detail</h5>
             <label for="name">
               <span>Name</span>
-              <input type="text" id="name" required autocomplete="off">
+              <input type="text" name="name" id="name" autocomplete="off" required>
             </label>
             <label for="email">
               <span>Email</span>
-              <input type="email" id="email" required autocomplete="off">
+              <input type="email" name="email" id="email" autocomplete="off" required>
             </label>
             <label for="phone">
               <span>Phone</span>
-              <input type="number" id="phone" required autocomplete="off">
+              <input type="number" name="phone" id="phone" autocomplete="off" required>
             </label>
             <button class="checkout-btn" type="submit" id="checkout-btn">
-              Checkout
+              Order
             </button>
           </form>
         </div>
@@ -201,7 +206,7 @@
         <template x-for="(item, index) in items" x-key="index">
           <div class="product-card" data-aos="flip-right" data-aos-duration="2000">
             <div class="product-icons">
-              <button href="#" class="item-modal-btn">
+              <!-- <button href="#" class="item-modal-btn">
                 <svg
                 width="20"
                 height="20"
@@ -213,7 +218,7 @@
               >
                   <use href="img/feather-sprite.svg#eye"/>
                 </svg>
-              </button>
+              </button> -->
               <button href="#" @click="$store.cart.add(item)" class="shopping-cart-button">
                 <svg
                 width="20"
@@ -284,10 +289,10 @@
     <!-- Footer -->
     <footer>
       <div class="socials">
-        <a href="https://instagram.com/ahmadammrm?igshid=YmMyMTA2M2Y="><i data-feather="instagram"></i></a>
+        <!-- <a href="https://instagram.com/ahmadammrm?igshid=YmMyMTA2M2Y="><i data-feather="instagram"></i></a>
         <a href="#"><i data-feather="facebook"></i></a>
         <a href="wa.me/6281217952403"><i data-feather="phone"></i></a>
-        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a> -->
       </div>
 
       <div class="links">
@@ -338,8 +343,6 @@
     <!-- My JS -->
     <script src="js/script.js"></script>
 
-    <!-- Alpine JS -->
-    <script src="js/app.js"></script>
 
   </body>
 </html>

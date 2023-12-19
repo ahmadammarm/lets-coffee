@@ -1,3 +1,4 @@
+
 :root {
   --primary: #ca6800;
   --bg: #010101;
@@ -82,9 +83,6 @@ body {
   margin: 0 0.5rem;
 }
 
-.navbar .navbar-extra a:hover {
-  color: var(--primary);
-}
 
 #hamburger-menu {
   display: none;
@@ -336,6 +334,58 @@ body {
 
 .shopping-cart.active {
   right: 0;
+}
+
+/* Checkout Form */
+.form-container {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  border-top: 1px dashed #000;
+  margin-top: 1rem;
+}
+
+.form-container h5 {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.form-container form {
+  width: 100%;
+  text-align: center;
+}
+
+.form-container label {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.form-container span {
+  text-align: right;
+}
+
+.form-container input {
+  background-color: #ddd;
+  padding: 5px;
+  border: 1px solid #000;
+  font-size: 1.2rem;
+  width: 70%;
+}
+
+.form-container button {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 

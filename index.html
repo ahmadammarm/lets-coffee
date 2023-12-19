@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lets Coffee</title>
+    <title>Lets Coffee | Fake Project</title>
     <link rel="icon" href="img/logokopi-removebg.png" />
 
     <!-- Fonts -->
@@ -77,6 +77,26 @@
         </template>
         <h4 x-show="!$store.cart.items.length">Keranjang Masih Kosong</h4>
         <h4 x-show="$store.cart.items.length">Total : <span x-text="formatRupiah($store.cart.total)"></span></h4>
+        <div class="form-container" x-show="$store.cart.items.length">
+          <form action="" id="checkout">
+            <h5>Customer Detail</h5>
+            <label for="name">
+              <span>Name</span>
+              <input type="text" id="name" required autocomplete="off">
+            </label>
+            <label for="email">
+              <span>Email</span>
+              <input type="email" id="email" required autocomplete="off">
+            </label>
+            <label for="phone">
+              <span>Phone</span>
+              <input type="number" id="phone" required autocomplete="off">
+            </label>
+            <button class="checkout-btn" type="submit" id="checkout-btn">
+              Checkout
+            </button>
+          </form>
+        </div>
       </div>
       <!-- Shopping Cart End -->
     </nav>
